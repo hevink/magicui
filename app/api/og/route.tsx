@@ -14,7 +14,6 @@ const image = fetch(
   new URL("../../../assets/images/og-bg-2.jpg", import.meta.url),
 ).then((res) => res.arrayBuffer());
 
-
 const logo = fetch(new URL("../../../app/icon.png", import.meta.url)).then(
   (res) => res.arrayBuffer(),
 );
@@ -26,7 +25,7 @@ export async function GET(req: Request) {
   const url = new URL(req.url);
   const params = Object.fromEntries(url.searchParams);
   const title = capitalize(
-    (params.title || "Magic UI")
+    (params.title || "Metamorix UI")
       .replace(/-/g, " ")
       .split(" ")
       .slice(0, 3)
@@ -73,12 +72,12 @@ export async function GET(req: Request) {
                 backgroundClip: "text",
                 WebkitBackgroundClip: "text",
                 color: "transparent",
-                fontSize: 35,
+                fontSize: 20,
                 letterSpacing: "-1.5px",
                 ...font("Inter 700"),
               }}
             >
-              Magic UI
+              Metamorix UI
             </span>
           </h1>
 
